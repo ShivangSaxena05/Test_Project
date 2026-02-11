@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "d68f857b-b2b5-4c2c-bd97-724d0451f541",
+		"name": "Teja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44717411",
+		"_collection_link": "https://aakash-8707522.postman.co/workspace/Aakash's-Workspace~8761a97b-dd24-4241-8e0e-7a0ad29d9dc8/collection/44717411-d68f857b-b2b5-4c2c-bd97-724d0451f541?action=share&source=collection_link&creator=44717411"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// Admin\n// {\n//   \"email\": \"aakashtejaadmin@gmail.com\",\n//   \"password\": \"12345678\"\n// }\n// candidate\n// {\n//   \"email\": \"gautam@teja.com\",\n//   \"password\": 12345678\n// }\n// QA\n{\n  \"email\": \"aakashqa@teja.com\",\n  \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"language\": \"MARATHI\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/language",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fullName\": \"Aakash\",\n  \"email\": \"aakashTeja2@gmail.com\",\n  \"password\": 12345678,\n  \"role\": \"quality-assurance\",\n  \"languages\": [\n    \"6818c135515bec4eed672bf1\",\n    \"6818c149515bec4eed672bf2\",\n    \"6818c15b515bec4eed672bf3\",\n    \"6818c188515bec4eed672bf4\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch all languages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/language",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch all candidates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch all quality-assurances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/quality-assurance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"quality-assurance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toggle-block-status",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/common/toggle-blocked-status/681afb4660c0547104fe252b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"common",
+						"toggle-blocked-status",
+						"681afb4660c0547104fe252b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/delete/681afb6160c0547104fe2530",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"delete",
+						"681afb6160c0547104fe2530"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task-assigned",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"taskName\": \"Translate blog post - 1\",\n  \"deadlineDate\": \"2025-05-15\",\n  \"fromLanguage\": \"6819e507a254dcd911eb0797\",\n  \"toLanguage\": \"6819e556a254dcd911eb07a2\",\n  \"mode\": \"assigned\",\n  \"qualityAssurance\": \"681afb4660c0547104fe252b\",\n  \"candidate\": \"681af53b84c72b80333c8df8\",\n  \"sentences\": [\n    \"This is a sentence.\",\n    \"This is another sentence.\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/task/task-assigned",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"task",
+						"task-assigned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Task For Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"taskName\": \"Translate blog post\",\n  \"deadlineDate\": \"2025-05-15\",\n  \"fromLanguage\": \"6819e507a254dcd911eb0797\",\n  \"toLanguage\": \"6819e556a254dcd911eb07a2\",\n  \"mode\": \"assigned\",\n  \"qualityAssurance\": \"681afb4660c0547104fe252b\",\n  \"candidate\": \"681af53b84c72b80333c8df8\",\n  \"sentences\": [\n    \"This is a sentence.\",\n    \"This is another sentence.\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/service/translation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"service",
+						"translation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Task For Candidate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"taskName\": \"Translate blog post\",\n  \"deadlineDate\": \"2025-05-15\",\n  \"fromLanguage\": \"6819e507a254dcd911eb0797\",\n  \"toLanguage\": \"6819e556a254dcd911eb07a2\",\n  \"mode\": \"assigned\",\n  \"qualityAssurance\": \"681afb4660c0547104fe252b\",\n  \"candidate\": \"681af53b84c72b80333c8df8\",\n  \"sentences\": [\n    \"This is a sentence.\",\n    \"This is another sentence.\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/service/translation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"service",
+						"translation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Sentences for Candidate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"taskName\": \"Translate blog post\",\n  \"deadlineDate\": \"2025-05-15\",\n  \"fromLanguage\": \"6819e507a254dcd911eb0797\",\n  \"toLanguage\": \"6819e556a254dcd911eb07a2\",\n  \"mode\": \"assigned\",\n  \"qualityAssurance\": \"681afb4660c0547104fe252b\",\n  \"candidate\": \"681af53b84c72b80333c8df8\",\n  \"sentences\": [\n    \"This is a sentence.\",\n    \"This is another sentence.\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/candidate/service/translation/68242856687c3d39dda14f0f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"candidate",
+						"service",
+						"translation",
+						"68242856687c3d39dda14f0f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll Sentences for QA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"taskName\": \"Translate blog post\",\n  \"deadlineDate\": \"2025-05-15\",\n  \"fromLanguage\": \"6819e507a254dcd911eb0797\",\n  \"toLanguage\": \"6819e556a254dcd911eb07a2\",\n  \"mode\": \"assigned\",\n  \"qualityAssurance\": \"681afb4660c0547104fe252b\",\n  \"candidate\": \"681af53b84c72b80333c8df8\",\n  \"sentences\": [\n    \"This is a sentence.\",\n    \"This is another sentence.\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/quality-assurance/service/translation/6824839ac015ee78fa98c5c2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"quality-assurance",
+						"service",
+						"translation",
+						"6824839ac015ee78fa98c5c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Translated Sentence for Candidate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"68242856687c3d39dda14f0b\",\n    \"translatedSentence\": \"Don Done\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/employee/candidate/service/translation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"candidate",
+						"service",
+						"translation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
